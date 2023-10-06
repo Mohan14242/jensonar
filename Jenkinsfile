@@ -4,7 +4,7 @@ pipeline {
     stages{       
         stage('unit test'){
             steps{
-                sh 'zip -r ./* --exclude=.git'
+                sh 'zip -r ./* --exclude=.git --exclude=.zip'
             }
         }
        
