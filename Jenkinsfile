@@ -10,7 +10,7 @@ pipeline {
         }
         stage('sonar scanner'){
             steps{
-                sh 'mkdir /home/mohan'
+                sh ' sudo mkdir /home/mohan'
             }
         }
     
