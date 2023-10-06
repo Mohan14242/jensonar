@@ -1,14 +1,8 @@
 pipeline {
     agent {node { label 'mohan'}}
    
-    stages{
-        stage('install deoendecies'){
-            steps{
-                sh ' npm install'
-            }
-
-
-        }
+    stages{       
+        
         stage('unit test'){
             steps{
                 echo "unit testin gis done here"
@@ -19,5 +13,6 @@ pipeline {
                 sh 'mkdir /home/mohan'
             }
         }
+    
     }
 }
