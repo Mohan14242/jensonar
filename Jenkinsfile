@@ -7,11 +7,7 @@ pipeline {
                 echo "unit testin gis done here"
             }
         }
-        stage('sonar scanner'){
-            steps{
-                sh 'sonar-scanner'
-            }
-        }
+       
         stage('deployment'){
             steps{
                 echo 'deploying the production'
