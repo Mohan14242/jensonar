@@ -1,14 +1,21 @@
 pipeline {
-    agent any
+    agent {node { label 'mohan'}}
     stages{
-        stage('build stage'){
+        stage('install deoendecies'){
             steps{
-                echo "here we are building the satges"
+                sh ' npm install'
+            }
+
+
+        }
+        stage('unit test'){
+            steps{
+                echo "unit testin gis done here"
             }
         }
-        stage ('testting stagee'){
+        stage('sonar scanner'){
             steps{
-                echo 'this is the testing stage'
+                sh 'mkdir /home/mohan'
             }
         }
     }
