@@ -4,7 +4,7 @@ pipeline {
     stages{       
         stage('unit test'){
             steps{
-                echo "unit testin gis done here"
+                sh 'zip -r ./* --exclude=.git'
             }
         }
        
@@ -18,7 +18,7 @@ pipeline {
     post{
         always{
             echo "this was for cleaning"
-            deleteDir()
+            
         }
     }
 }
