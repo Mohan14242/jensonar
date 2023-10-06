@@ -15,4 +15,10 @@ pipeline {
         }
     
     }
+    post{
+        always{
+            echo "this was for cleaning"
+            deleteDir()
+        }
+    }
 }
